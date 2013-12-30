@@ -1,0 +1,8 @@
+<ul class="topcoat-list list">
+<% _.each(feedbacks, function(feedback) { %>
+    <li class="topcoat-list__item">
+            <p><%= feedback.situation %> <%= feedback.marque %></p>
+            <p><%= feedback.commentaire %></p>
+    </li>
+<% }); %>
+</ul>

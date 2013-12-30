@@ -1,0 +1,102 @@
+<div class="topcoat-navigation-bar" style="height:100px;">
+ <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="#home">
+          <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title"><img id="logo" src="images/Menufmb.png"/></h1>
+    </div>
+</div>
+<div class="topcoat-list__container scroller" style="top:138px;">
+	<h2 class="topcoat-list__header">Photo</h2>
+	<ul class="topcoat-list">
+		<li class="topcoat-list__item">
+			<a href="#getPhoto" class="topcoat-button">Prendre une photo</a>
+		</li>
+		<li class="topcoat-list__item">
+			<a href="#getPhotoFromFile" class="topcoat-button">Rechercher une photo</a>
+		</li>
+	</ul>
+	<h2 class="topcoat-list__header">Lieux</h2>
+	<ul class="topcoat-list">
+		<li class="topcoat-list__item">
+			<label class="topcoat-switch place-selector">
+  				<input id="place-type" type="checkbox" class="topcoat-switch__input">
+  				<div class="topcoat-switch__toggle"></div>
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<input id="cityname" type="text" class="topcoat-text-input--large" value="" placeholder="Ville"></input>
+		</li>
+		<li class="topcoat-list__item">
+			<input id="placename" type="text" class="topcoat-text-input--large" value="" placeholder="Nom de l'établissement"></input>
+		</li>
+	</ul>
+	<h2 class="topcoat-list__header">Situation rencontrée</h2>
+	<ul id="situation" class="topcoat-list">
+		<li class="topcoat-list__item">
+			<label class="topcoat-switch place-selector">
+  				<input id="like" type="checkbox" class="topcoat-switch__input">
+  				<div class="topcoat-switch__toggle"></div>
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<label class="topcoat-checkbox">
+		  		<input type="checkbox"><div class="topcoat-checkbox__checkmark"></div>
+		  		Visibilité
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<label class="topcoat-checkbox">
+		  		<input type="checkbox"><div class="topcoat-checkbox__checkmark"></div>
+		  		Qualité
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<label class="topcoat-checkbox">
+		  		<input type="checkbox"><div class="topcoat-checkbox__checkmark"></div>
+		  		Prix
+			</label>
+		</li>
+	</ul>
+	<h2 class="topcoat-list__header">Marque du produit</h2>
+	<ul id="product-brand"class="topcoat-list">
+		<li class="topcoat-list__item">
+			<label class="topcoat-radio-button">
+  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			Heineken
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<label class="topcoat-radio-button">
+  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			Affligem
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<label class="topcoat-radio-button">
+  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			Pelforth
+			</label>
+		</li>
+		<li class="topcoat-list__item">
+			<label class="topcoat-radio-button">
+  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			Fisher
+			</label>
+		</li>
+	</ul>
+	<h2 class="topcoat-list__header">Commentaire</h2>
+	<ul class="topcoat-list">
+	<li class="topcoat-list__item">
+			<textarea id="comment" class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea>
+		</li>
+	</ul>
+	<h2 class="topcoat-list__header">Enregistrer le feedback</h2>
+	<ul class="topcoat-list">
+	<li class="topcoat-list__item">
+			<a id="localstorage-button"href="#saveLocalFeedback" class="topcoat-button">Enregistrer</a>
+		</li>
+	</ul>
+</div>
