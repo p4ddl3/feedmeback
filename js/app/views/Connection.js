@@ -26,7 +26,7 @@ define(function(requrire){
 			connect : function(){
 				var credentials = { email:$("#connection-email-address").val(), password:$("#connection-password").val()};
 				var remember_me = $("#connection-remember-me").val();
-				 $.getJSON('http://localhost/feedmeback-api/index.php?callback=?','method_name=connexion'+'&email='+credentials.email+'&password='+credentials.password,function(res){
+				 $.getJSON('http://feedmeback.alwaysdata.net/index.php?callback=?','method_name=connexion'+'&email='+credentials.email+'&password='+credentials.password,function(res){
     				if(res.content === "granted"){
     					window.location.href = "#home";
     				}else{
