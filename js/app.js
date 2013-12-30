@@ -19,13 +19,13 @@ require.config({
 });
 
 
-require(['jquery', 'backbone'], function ($, Backbone) {
-			$('body').html('<span>test</span>');
-		    /*var router = new Router();
+require(['jquery', 'backbone', 'app/router'], function ($, Backbone, Router) {
+			//$('body').html('<span>test</span>');
+		    var router = new Router();
 
 		    $("body").on("click", ".back-button", function (event) {
 		        event.preventDefault();
 		        window.history.back();
 		    });
-		    Backbone.history.start();*/
+		    Backbone.history.start();
 });

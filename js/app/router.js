@@ -5,7 +5,7 @@ define(function (require) {
     var $               = require('jquery'),
         Backbone        = require('backbone'),
         PageSlider      = require('app/utils/pageslider'),
-        ConnectionView  = require('app/views/connection'),
+        ConnectionView  = require('app/views/Connection'),
 
         slider = new PageSlider($('body')),
 
