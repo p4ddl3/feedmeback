@@ -19,7 +19,7 @@ require.config({
 });
 
 
-require(['jquery', 'backbone', 'app/router'], function ($, Backbone, Router) {
+require(['jquery', 'backbone'], function ($, Backbone) {
 			$('body').html('<span>test</span>');
 		    /*var router = new Router();
 
