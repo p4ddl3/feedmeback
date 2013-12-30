@@ -167,6 +167,7 @@
 .topcoat-button-bar__button--large {
   padding: 0 1.25rem;
   font-size: 16px;
+  font-weight: 400;
   line-height: 3rem;
   letter-spacing: 1px;
   color: #454545;
@@ -591,6 +592,7 @@
 .topcoat-button--large--cta {
   padding: 0 1.25rem;
   font-size: 16px;
+  font-weight: 400;
   line-height: 3rem;
   letter-spacing: 1px;
   color: #454545;

@@ -19,7 +19,6 @@ define(function (require) {
             "feedbackForm": "feedbackForm"
         },
         connectionPage: function(){
-            alert("connectionView");
             connectionView.delegateEvents();
             slider.slidePage(connectionView.$el);
         },
