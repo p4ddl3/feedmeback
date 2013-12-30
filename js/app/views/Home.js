@@ -5,9 +5,7 @@ define(function(require){
     var $                   = require('jquery'),
         _                   = require('underscore'),
         Backbone            = require('backbone'),
-        FeedbackListView 	= require('app/views/FeedbackList'),
         tpl                 = require('text!tpl/Home.html'),
-        models				= require('app/models/feedback'),
 
         template = _.template(tpl);
 
