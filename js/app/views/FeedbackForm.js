@@ -15,7 +15,9 @@ define(function(require){
 				this.render();
 			},
 			events:{
-				"click #localstorage-button" : "localstore"
+				"click #localstorage-button" : "localstore",
+				"click #takePhoto" : "takePhoto",
+				"click #getPhotoFromLibrary" : "takePhoto"
 			},
 			render: function(){
 				this.$el.html(template());
@@ -89,6 +91,30 @@ define(function(require){
 					}
 				}
 				return radioChecked;
+			},
+			takePhoto: function(event) {
+				var sourceType = $(event.target).data('source');
+			    event.preventDefault();
+			    if (!navigator.camera) {
+			        alert("Camera API not supported" + sourceType, "Error");
+			        return;
+			    }
+			    var options =   {   quality: 50,
+			                        destinationType: Camera.DestinationType.DATA_URL,
+			                        sourceType: sourceType,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+			                        encodingType: 0     // 0=JPG 1=PNG
+			                    };
+			 
+			    navigator.camera.getPicture(
+			        function(imageData) {
+			            alert("ok!");
+			        },
+			        function() {
+			            alert("pas ok :/");
+			        },
+			        options);
+			 
+			    return false;
 			}
 
 		});
