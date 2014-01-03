@@ -128,6 +128,7 @@ define(function(require){
 			uploadPhoto: function(imageURI){
 				var ft = new FileTransfer();
 				var options = new FileUploadOptions();
+				alert(ft+","+options);
 			}
 
 		});
