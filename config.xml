@@ -12,4 +12,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+	<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+
 </widget>
