@@ -96,18 +96,22 @@ define(function(require){
 				var sourceType = $(event.target).data('source');
 			    event.preventDefault();
 			    if (!navigator.camera) {
-			        alert("Camera API not supported" + sourceType, "Error");
-			        return;
+			        alert("Camera non supportée. Image par défaut.", "Error");
+			        var image = document.getElementById('photo-place');
+			        image.src = "http://www.beer100.com/images/beermug.jpg";
+			        return ;
 			    }
 			    var options =   {   quality: 50,
-			                        destinationType: Camera.DestinationType.DATA_URL,
+			                        destinationType: Camera.DestinationType.FILE_URI,
 			                        sourceType: sourceType,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
 			                        encodingType: 0     // 0=JPG 1=PNG
 			                    };
 			 
 			    navigator.camera.getPicture(
-			        function(imageData) {
-			            $('#photo', this.el).attr('src', "data:image/jpeg;base64," + imageData);
+			        function(imageURI) {
+			            var image = document.getElementById('photo-place');
+			            image.src = imageURI;
+
 			        },
 			        function() {
 			            
