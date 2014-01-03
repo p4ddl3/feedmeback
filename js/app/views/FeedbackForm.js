@@ -107,10 +107,10 @@ define(function(require){
 			 
 			    navigator.camera.getPicture(
 			        function(imageData) {
-			            alert("ok!");
+			            $('#photo', this.el).attr('src', "data:image/jpeg;base64," + imageData);
 			        },
 			        function() {
-			            alert("pas ok :/");
+			            
 			        },
 			        options);
 			 
