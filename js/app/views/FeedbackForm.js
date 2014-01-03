@@ -25,17 +25,71 @@ define(function(require){
 				var feedback = {
 					cityName: 		$("#cityname").val(),
 					placeName: 		$("#placename").val(),
-					situation: 		$("#situation").val(),
-					productBrand: 	$("#product-brand").val(),
-					comment: 		$("#comment").val()
+					comment: 		$("#comment").val(),
+					placeType: 		document.getElementById("place-type").checked===true?"ALI":"CHR",
+					like: 			document.getElementById("like").checked===false?"like":"dislike",
+					date: 			new Date()
 				};
-				alert("local store " 	+ feedback.cityName+", "
-										+ feedback.placeName+", "
-										+ feedback.situation+", "
-										+ feedback.productBrand+","
-										+ feedback.comment
+				feedback.situation = this.getSituations();
+				feedback.productBrand = this.getBrand();
+				feedback.user = window.localStorage.getItem("user");
 
+				if(feedback.situation != null && feedback.productBrand != null){
+
+				alert(					"cityname: "+		feedback.cityName+", "
+										+ "\nplace: "+		feedback.placeName+", "
+										+ "\nsituation: "+	feedback.situation+", "
+										+ "\nbrand: "+		feedback.productBrand+","
+										+ "\ncomment: "+	feedback.comment+","
+										+"\nlike: "+		feedback.like+", "
+										+"\nplace: "+		feedback.placeType+","
+										+"\nuser: "+ 		feedback.user+","
+										+"\ndate: "+ 		feedback.date
 										);
+
+			$.getJSON('http://feedmeback.alwaysdata.net/index.php?callback=?',
+																'method_name=addfeedback'+
+																'&cityName='		+feedback.cityName+
+																'&placeName='		+feedback.placeName+
+																'&situation='		+feedback.situation+
+																'&productBrand='	+feedback.productBrand+
+																'&comment='			+feedback.comment+
+																'&like='			+feedback.like+
+																'&placeType='		+feedback.placeType+
+																'&authorEmail='		+feedback.user+
+																'&date='			+feedback.date,
+																function(res){
+    				if(res.content === "stored"){
+    					alert("Feedback enregistré");
+    					window.location.href = "#home";
+    				}
+					});
+				}else{
+					alert("Vous devez remplir tous les champs !");
+				}
+
+			},
+			getSituations: function(){
+				var checkBoxes = document.getElementsByName("situation");
+				var checkBoxesChecked = [];
+				for(var i=0; i < checkBoxes.length; i++){
+					if(checkBoxes[i].checked){
+						checkBoxesChecked.push(checkBoxes[i].value);
+					}
+				}
+				return checkBoxesChecked.length>0?checkBoxesChecked:null;
+			},
+
+			getBrand: function(){
+				var radio = document.getElementsByName("brand");
+				var radioChecked = null;
+				for(var i=0; i < radio.length; i++){
+					if(radio[i].checked){
+						radioChecked = (radio[i].value);
+					}
+				}
+				return radioChecked;
 			}
+
 		});
 });

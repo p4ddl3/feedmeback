@@ -21,10 +21,12 @@
 	<h2 class="topcoat-list__header">Lieux</h2>
 	<ul class="topcoat-list">
 		<li class="topcoat-list__item">
+		<span>CHR</span>
 			<label class="topcoat-switch place-selector">
   				<input id="place-type" type="checkbox" class="topcoat-switch__input">
   				<div class="topcoat-switch__toggle"></div>
 			</label>
+		<span>ALI</span>	
 		</li>
 		<li class="topcoat-list__item">
 			<input id="cityname" type="text" class="topcoat-text-input--large" value="" placeholder="Ville"></input>
@@ -36,26 +38,28 @@
 	<h2 class="topcoat-list__header">Situation rencontrée</h2>
 	<ul id="situation" class="topcoat-list">
 		<li class="topcoat-list__item">
+		<span>Like</span>
 			<label class="topcoat-switch place-selector">
   				<input id="like" type="checkbox" class="topcoat-switch__input">
   				<div class="topcoat-switch__toggle"></div>
 			</label>
+			<span>Dislike</span>
 		</li>
 		<li class="topcoat-list__item">
 			<label class="topcoat-checkbox">
-		  		<input type="checkbox"><div class="topcoat-checkbox__checkmark"></div>
+		  		<input type="checkbox" name="situation" value="Visibilité"><div class="topcoat-checkbox__checkmark"></div>
 		  		Visibilité
 			</label>
 		</li>
 		<li class="topcoat-list__item">
 			<label class="topcoat-checkbox">
-		  		<input type="checkbox"><div class="topcoat-checkbox__checkmark"></div>
+		  		<input type="checkbox" name="situation" value="Qualité"><div class="topcoat-checkbox__checkmark"></div>
 		  		Qualité
 			</label>
 		</li>
 		<li class="topcoat-list__item">
 			<label class="topcoat-checkbox">
-		  		<input type="checkbox"><div class="topcoat-checkbox__checkmark"></div>
+		  		<input type="checkbox" name="situation" value="Prix"><div class="topcoat-checkbox__checkmark"></div>
 		  		Prix
 			</label>
 		</li>
@@ -64,25 +68,25 @@
 	<ul id="product-brand"class="topcoat-list">
 		<li class="topcoat-list__item">
 			<label class="topcoat-radio-button">
-  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			<input type="radio"name="brand" value="Heineken"><div class="topcoat-radio-button__checkmark"></div>
   			Heineken
 			</label>
 		</li>
 		<li class="topcoat-list__item">
 			<label class="topcoat-radio-button">
-  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			<input type="radio" name="brand" value="Affligem"><div class="topcoat-radio-button__checkmark"></div>
   			Affligem
 			</label>
 		</li>
 		<li class="topcoat-list__item">
 			<label class="topcoat-radio-button">
-  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			<input type="radio" name="brand" value="Pelforth"><div class="topcoat-radio-button__checkmark"></div>
   			Pelforth
 			</label>
 		</li>
 		<li class="topcoat-list__item">
 			<label class="topcoat-radio-button">
-  			<input type="radio" name="topcoat"><div class="topcoat-radio-button__checkmark"></div>
+  			<input type="radio" name="brand" value = "Fisher"><div class="topcoat-radio-button__checkmark"></div>
   			Fisher
 			</label>
 		</li>
@@ -90,7 +94,7 @@
 	<h2 class="topcoat-list__header">Commentaire</h2>
 	<ul class="topcoat-list">
 	<li class="topcoat-list__item">
-			<textarea id="comment" class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea>
+			<textarea id="comment" class="topcoat-textarea"  placeholder="Textarea"></textarea>
 		</li>
 	</ul>
 	<h2 class="topcoat-list__header">Enregistrer le feedback</h2>
