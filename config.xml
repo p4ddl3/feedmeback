@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget	xmlns			="http://www.w3.org/ns/widgets" 
+		xmlns:gap   	="http://phonegap.com/ns/1.0"
+		index 			="com.heineken.feedmeback" 
+		version 		="0.0.1" >
+    <name>Feed me back</name>
+    <description>
+        Envoyez un feedback à Heineken
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        TNCY Not Compiled Yet
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
